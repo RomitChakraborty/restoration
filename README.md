@@ -1,6 +1,6 @@
 # Restoration Pipeline
 
-A restoration toolkit optimised for Apple M2, combining Real-ESRGAN super-resolution, DeOldify colourisation, and GFPGAN face enhancement for heritage content preservation.
+A restoration toolkit optimised for Apple M2, combining Real-ESRGAN super-resolution, DeOldify colourisation, and GFPGAN face enhancement for content preservation.
 
 ## Overview
 
@@ -20,23 +20,23 @@ This repository contains the complete pipeline used for restoring 1977 cricket h
 
 ### Figure 1: Performance-Memory Trade-off Analysis on Apple M2 Pro
 
-**Performance-Memory Trade-off Analysis for Real-ESRGAN Variants on Apple Silicon Architecture.** This multi-panel analysis demonstrates the computational characteristics and optimisation strategies for video super-resolution on unified memory GPU systems.
+**Performance-Memory Trade-off Analysis for Real-ESRGAN Variants on Apple M2.** Some computational characteristics and optimisation strategies for video super-resolution on unified memory GPU systems.
 
-**(A) Processing Time vs. Tile Size with Memory Usage Overlay**: Comparative analysis of four Real-ESRGAN model variants showing processing time per frame (left y-axis, seconds) against tile size configurations (x-axis, pixels) with corresponding memory usage patterns (right y-axis, gray fill and dashed line, GB). The RRDBNet-based models (RealESRGAN_x4plus in red circles, RealESRNet_x4plus in blue squares) exhibit 2.8× longer processing times compared to SRVGGNetCompact-based variants (realesr-general-x4v3 in green triangles, realesr-general-wdn-x4v3 in orange diamonds). The highlighted blue optimal region (900-1200 pixel tiles) represents the performance sweet spot balancing processing speed and memory efficiency on 16GB unified memory systems.
+**(A) Processing Time vs. Tile Size with Memory Usage Overlay**: Analysis of four Real-ESRGAN model variants showing processing time per frame (left y-axis, seconds) against tile size configurations (x-axis, pixels) with corresponding memory usage patterns (right y-axis, gray fill and dashed line, GB). The RRDBNet-based models (RealESRGAN_x4plus in red circles, RealESRNet_x4plus in blue squares) exhibit 2.8× longer processing times compared to SRVGGNetCompact-based variants (realesr-general-x4v3 in green triangles, realesr-general-wdn-x4v3 in orange diamonds). The highlighted blue optimal region (900-1200 pixel tiles) represents the performance sweet spot balancing processing speed and memory efficiency on 16GB unified memory systems.
 
 **(B) Scalability Analysis - Processing Time vs. Input Resolution**: Resolution scaling characteristics from 240p (0.08MP) to 1080p (2.1MP) input formats, demonstrating sub-quadratic scaling relationships (∼pixels^0.85) due to optimised tile processing and MPS backend efficiency. The SRVGGNet variants maintain processing times under 7 seconds per frame even at 1080p input, while RRDBNet models approach 19 seconds per frame at the same resolution.
 
-**(C) Memory Utilisation Patterns**: Real-world memory consumption timeline during an 8.2-hour heritage content restoration pipeline combining DeOldify colourisation, Real-ESRGAN upscaling, and GFPGAN face enhancement. Peak memory utilisation reaches 9.2GB (57.5% of available 16GB), demonstrating efficient unified memory architecture utilisation without approaching system limits.
+**(C) Memory Utilisation Patterns**: Real-world memory consumption timeline during an 8.2-hour content restoration pipeline combining DeOldify colourisation, Real-ESRGAN upscaling, and GFPGAN face enhancement. Peak memory utilisation reaches 9.2GB (57.5% of available 16GB), demonstrating efficient unified memory architecture utilisation without approaching system limits.
 
 **Technical Specifications**: All measurements conducted on Apple MacBook Pro M2 Pro (12-core, 16GB unified memory) running macOS 24.0.0 with PyTorch 2.8.0 MPS backend.
 
-## Heritage Content Restoration Results
+## Content Restoration Results
 
-![Figure 2: Heritage Content Restoration Quality Comparison](figures/figure_2_heritage_restoration.png)
+![Figure 2: Restoration Quality Comparison](figures/figure_2_heritage_restoration.png)
 
-### Figure 2: Heritage Content Restoration Quality Comparison
+### Figure 2: Restoration Quality Comparison
 
-**Heritage Content Restoration Quality Comparison for 1977 Cricket Footage.** This comprehensive analysis demonstrates the complete AI-powered restoration pipeline applied to vintage sports broadcast content, showcasing the progressive enhancement from degraded analog source material through multiple processing stages.
+**Quality Comparison for 1977 Cricket Footage.** This analysis demonstrates the complete AI-powered restoration pipeline applied to vintage sports broadcast content, showcasing the progressive enhancement from degraded analog source material through multiple processing stages.
 
 **(A) Original Source Footage - Analog Broadcast Quality**: Source material from 1977 cricket broadcast (640×480) exhibiting typical analog degradation including interlacing artifacts, analog noise and grain patterns, low contrast, and temporal instabilities characteristic of 1970s PAL television recording technology.
 
@@ -51,6 +51,8 @@ This repository contains the complete pipeline used for restoring 1977 cricket h
 **(F) Temporal Consistency Analysis**: Five consecutive frames demonstrating temporal stability achieved through the restoration pipeline. SSIM-based consistency scores show progression: Original (0.929) → Logo-Removed (0.936) → Colourised (0.936) → Final Enhanced (0.953), indicating +2.5% improvement in temporal coherence.
 
 **(G) Processing Performance and Quality Metrics Summary**: Comprehensive table showing resolution progression, processing times with millisecond precision, actual measured PSNR values, and measured temporal consistency (SSIM) across all pipeline stages. Progressive stage-to-stage PSNR shows significant quality improvements: Colourised vs Logo-removed (28.837 dB), Final vs Colourised (38.083 dB).
+
+The enhanced video can be viewed here: https://youtube.com/shorts/hLc2MV6-or0 and here: https://youtu.be/D6hBX9cFdwc. A playlist of all upscaled film is maintained here: https://www.youtube.com/playlist?list=PL7IF8K7UyT_9AYeAnG9SYfeLGfRfHAWUI
 
 ## Repository Structure
 
