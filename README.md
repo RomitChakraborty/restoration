@@ -1,6 +1,6 @@
-# Heritage Video Restoration Pipeline
+# Restoration Pipeline
 
-A comprehensive AI-powered video restoration toolkit optimised for Apple Silicon, combining Real-ESRGAN super-resolution, DeOldify colourisation, and GFPGAN face enhancement for heritage content preservation.
+A restoration toolkit optimised for Apple M2, combining Real-ESRGAN super-resolution, DeOldify colourisation, and GFPGAN face enhancement for heritage content preservation.
 
 ## Overview
 
