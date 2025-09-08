@@ -134,13 +134,18 @@ python colourise_custom.py --input heritage_video.mp4 --render_factor 24
 If you use this work in your research, please cite:
 
 ```bibtex
-@inproceedings{chakraborty2024heritage,
+@inproceedings{chakraborty2026heritage,
   title={Heritage Video Restoration using Real-ESRGAN on Apple Silicon: Performance Analysis and Quality Enhancement},
   author={Chakraborty, Romit},
-  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
-  year={2024}
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  year={2026}
 }
 ```
+
+**Note**: This work is currently available for submission to:
+- **WACV 2026 Round 2** (deadline: September 19, 2025) - Winter Conference on Applications of Computer Vision in Tucson, AZ
+- **CVPR 2026** (expected deadline: November 2025) - Computer Vision and Pattern Recognition in Denver, CO (June 6-12, 2026)
+- **ECCV 2026** (expected deadline: early 2026) - European Conference on Computer Vision (September 8-13, 2026)
 
 ## Acknowledgments
 
